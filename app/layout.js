@@ -1,7 +1,29 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+import '@/public/assets/vendor/aos/aos.css'
+import '@/public/assets/vendor/bootstrap/css/bootstrap.min.css'
+import '@/public/assets/vendor/bootstrap-icons/bootstrap-icons.css'
+import '@/public/assets/vendor/glightbox/css/glightbox.min.css'
+import '@/public/assets/vendor/swiper/swiper-bundle.min.css'
+import "./globals.css";
+import {Open_Sans, Raleway} from 'next/font/google'
+import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
+import BootstrapClient from "./BootstrapClient";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Open_Sans({ 
+  subsets: [ 
+  "latin",
+  "cyrillic",
+  "cyrillic-ext",
+  "greek",
+  "greek-ext",
+  "hebrew",
+  "latin",
+  "latin-ext",
+  "math",
+  "symbols",
+  "vietnamese"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +33,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Nav/>
+        {children}
+        <Footer/>
+        <BootstrapClient/>
+        <Script src="assets/vendor/aos/aos.js"/>
+        <Script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"/>
+        <Script src="assets/vendor/glightbox/js/glightbox.min.js"/>
+        <Script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"/>
+        <Script src="assets/vendor/swiper/swiper-bundle.min.js"/>
+        <Script src="assets/vendor/php-email-form/validate.js"/>
+        <Script src="assets/js/main.js"/>
+        </body>
     </html>
   );
 }
