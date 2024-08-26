@@ -19,9 +19,10 @@ import "../../public/assets/css/variables-purple.css"
 import "../../public/assets/css/variables-red.css"
 import "../../public/assets/css/variables.css"
 import Testimonial from "../../Components/Testimonial";
-import Client from "@/Components/Clients";
-import Nav from "@/Components/Nav";
-import Footer from "@/Components/Footer";
+import Nav from "../../Components/Nav";
+import Client from "../../Components/Clients";
+import Footer from "../../Components/Footer";
+
 export default function Home() {
   useEffect(() => {
     aos.init({
