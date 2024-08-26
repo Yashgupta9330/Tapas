@@ -7,8 +7,6 @@ import '@/public/assets/vendor/glightbox/css/glightbox.min.css'
 import '@/public/assets/vendor/swiper/swiper-bundle.min.css'
 import "./globals.css";
 import {Open_Sans, Raleway} from 'next/font/google'
-import Nav from "../Components/Nav";
-import Footer from "../Components/Footer";
 import BootstrapClient from "./BootstrapClient";
 
 const inter = Open_Sans({ 
@@ -33,10 +31,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav/>
+      <body className={inter.className}> 
         {children}
-        <Footer/>
         <BootstrapClient/>
         <Script src="assets/vendor/aos/aos.js"/>
         <Script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"/>
